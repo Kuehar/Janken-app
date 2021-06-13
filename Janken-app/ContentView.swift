@@ -11,9 +11,23 @@ struct ContentView: View {
     var body: some View {
         
         
-        Image("gu")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        
+        
+        VStack {
+            // 画像表示
+            Image("gu")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            // 画像に合致するテキスト
+            Text("グー")
+            
+            // ボタンを押した時の動き
+            Button(action: {
+                print("タップしましたね!")
+            }){
+                Text("ジャンケンしよう")
+            }
+        }
     }
 }
 
